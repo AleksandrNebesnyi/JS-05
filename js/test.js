@@ -52,17 +52,14 @@ Storage.prototype.removeItem = function (Item) {
   const nameIndex = this.items.indexOf(Item);
   console.log(this.items);
   console.log(nameIndex);
-  //     if (nameIndex < 0) {
-  //     console.log(`${name} does not exist`);
-  //     return;
-  //   }
+  if (nameIndex < 0) {
+    console.log(`${Item} does not exist`);
+    return;
+  }
 
-  //   newName !== null
-  //     ? courses.splice(nameIndex, 1, newName)
-  //     : courses.splice(nameIndex, 1);
+  this.items.splice(nameIndex, 1);
 
-  //   console.log(courses);
-  // };
+  console.log(this.items);
 };
 
 // Пиши код выше этой строки
